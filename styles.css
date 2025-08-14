@@ -1,0 +1,134 @@
+/* Custom CSS from the original HTML file */
+:root {
+    --color-vibrant-blue: #08AEEA;
+    --color-bright-teal: #2AF598;
+    --color-accent-cyan: #1CE5B5;
+    --color-dark-text: #1A202C;
+    --color-subtle-gray: #A0AEC0;
+    --color-light-bg: #F7FAFc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-dark-text);
+    background-color: var(--color-light-bg);
+}
+
+.bg-blue-600 {
+    background-color: var(--color-vibrant-blue);
+}
+
+.bg-blue-500 {
+    background-color: var(--color-vibrant-blue);
+}
+
+.bg-yellow-400 {
+    background-color: var(--color-bright-teal);
+}
+
+.hover\:bg-yellow-300:hover {
+    background-color: var(--color-accent-cyan);
+}
+
+.text-blue-800 {
+    color: var(--color-dark-text);
+}
+
+.text-gray-800 {
+    color: var(--color-dark-text);
+}
+
+.text-gray-600 {
+    color: var(--color-subtle-gray);
+}
+
+.bg-gray-100 {
+    background-color: var(--color-light-bg);
+}
+
+.bg-blue-800 {
+    background-color: var(--color-vibrant-blue);
+}
+
+.hover\:text-yellow-400:hover {
+    color: var(--color-accent-cyan);
+}
+
+.hover\:text-yellow-300:hover {
+    color: var(--color-accent-cyan);
+}
+
+.hover\:grayscale-0:hover {
+    filter: grayscale(0);
+}
+
+/* Custom styling for the interactive FAQ section */
+details summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details[open] summary:after {
+    transform: rotate(45deg);
+}
+
+details summary:after {
+    content: "+";
+    font-size: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+details[open] summary {
+    border-bottom: none;
+}
+
+/* Modal styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+
+/* .navtag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+} */
+
+#vid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-player {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}

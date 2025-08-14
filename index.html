@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPD Solar Engineers Pvt. Ltd.</title>
+    <!-- Use Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Modal for Contact Info -->
+    <div id="contact-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+            <p class="text-lg mb-2"><strong>Phone:</strong> demo</p>
+            <p class="text-lg mb-4"><strong>Email:</strong> demo</p>
+            <button onclick="hideContactModal()"
+                class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-500 transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-lg sticky top-0 z-50 navanime">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- PPD Logo -->
+                <img src="./assets/logo[1].JPG" alt="PPD Solar Logo" class="h-10 w-auto rounded-lg">
+                <span class="text-3xl font-bold">PPD SOLAR</span>
+                <span class="hidden md:inline-block text-sm">ENGINEERS PVT LTD</span>
+            </div>
+            <nav class="hidden md:flex space-x-14 font-semibold navtag">
+                <a href="#" class="hover:text-yellow-300 transition-colors">Our Offerings</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Solar Solutions</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Our Presence</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Blog</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">More</a>
+            </nav>
+            <!-- Changed button for Contact Us -->
+            <button onclick="showContactModal()"
+                class="bg-yellow-400 text-blue-800 px-4 py-2 rounded-full font-bold shadow-md hover:bg-yellow-300 transition-colors hidden md:block">
+                Contact Us
+            </button>
+            <button class="md:hidden text-2xl">☰</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-blue-500 text-white py-20 px-4 text-center">
+            <div class="container mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Celebrate your independence every day.</h1>
+                <p class="text-lg md:text-xl font-light mb-8">Go solar. Let the sun power your freedom.</p>
+                <button onclick="showContactModal()"
+                    class="bg-yellow-400 text-blue-800 text-lg md:text-xl px-8 py-4 rounded-full font-bold shadow-lg hover:bg-yellow-300 transition-all transform hover:scale-105">
+                    Get a Free Quote
+                </button>
+                <div class="mt-12">
+                    <p class="text-sm">India's trusted solar company</p>
+                    <p class="text-md font-semibold">Rated 4.8 on Google with 6000+ customer reviews</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Solutions Section -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Our Solar Solutions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Solution Card 1 -->
+                    <div
+                        class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <img src="https://placehold.co/400x250/F7FAFC/A0AEC0?text=Homes" alt="Homes"
+                            class="rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Homes</h3>
+                        <p class="text-gray-600">Power your home with clean, reliable energy and save on electricity
+                            bills.</p>
+                    </div>
+                    <!-- Solution Card 2 -->
+                    <div
+                        class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <img src="https://placehold.co/400x250/F7FAFC/A0AEC0?text=Housing+Society" alt="Housing Society"
+                            class="rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Housing Society</h3>
+                        <p class="text-gray-600">Provide green energy solutions for your community with our tailored
+                            plans.</p>
+                    </div>
+                    <!-- Solution Card 3 -->
+                    <div
+                        class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <img src="https://placehold.co/400x250/F7FAFC/A0AEC0?text=Commercial" alt="Commercial"
+                            class="rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Commercial</h3>
+                        <p class="text-gray-600">Reduce operational costs and achieve sustainability goals for your
+                            business.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 px-4 bg-gray-200">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">90% of customers recommend us!</h2>
+                <p class="text-lg text-gray-600 mb-12">Don't just believe us, read the reviews for yourself.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <p class="italic text-gray-600 mb-4">"I am happy to acknowledge that PPD Solar has met the
+                            strictest Quality & Safety norms dictated by the Global Standards of a major corporation."
+                        </p>
+                        <p class="font-semibold text-blue-600">- Demo Customer, Business Head</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <p class="italic text-gray-600 mb-4">"I was worried about the generation, but I am so excited
+                            now. My bills have gone down from a high amount to a low amount per month. The team also
+                            comes home and regularly cleans my panels."</p>
+                        <p class="font-semibold text-blue-600">- Demo User, Happy Homeowner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Section -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8">Trusted By</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                    <img src="https://placehold.co/200x80/FFFFFF/A0AEC0?text=Partner+1" alt="Partner 1"
+                        class="mx-auto filter grayscale hover:grayscale-0 transition-filter">
+                    <img src="https://placehold.co/200x80/FFFFFF/A0AEC0?text=Partner+2" alt="Partner 2"
+                        class="mx-auto filter grayscale hover:grayscale-0 transition-filter">
+                    <img src="https://placehold.co/200x80/FFFFFF/A0AEC0?text=Partner+3" alt="Partner 3"
+                        class="mx-auto filter grayscale hover:grayscale-0 transition-filter">
+                    <img src="https://placehold.co/200x80/FFFFFF/A0AEC0?text=Partner+4" alt="Partner 4"
+                        class="mx-auto filter grayscale hover:grayscale-0 transition-filter">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Video Section -->
+        <section id="vid">
+            <video class="video-player" controls>
+                <source src="https://www.example.com/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+
+        <!-- FAQ Section -->
+        <section class="py-16 px-4 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- FAQ Item 1 -->
+                    <details class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                        <summary class="font-medium text-lg">What is the life of a rooftop solar system?</summary>
+                        <p class="mt-4 text-gray-600">A rooftop solar system typically has a life of 25-30 years. The
+                            performance of the panels degrades slightly over time, but they continue to generate
+                            electricity for decades.</p>
+                    </details>
+                    <!-- FAQ Item 2 -->
+                    <details class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                        <summary class="font-medium text-lg">Do Solar Rooftop projects have a high maintenance cost?
+                        </summary>
+                        <p class="mt-4 text-gray-600">No, the maintenance cost for solar rooftop projects is generally
+                            very low. The main requirement is to keep the panels clean, which can be done easily with
+                            water and a soft brush.</p>
+                    </details>
+                    <!-- FAQ Item 3 -->
+                    <details class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                        <summary class="font-medium text-lg">Can Solar projects damage my roof?</summary>
+                        <p class="mt-4 text-gray-600">When installed correctly by professionals, solar projects do not
+                            damage your roof. Our installation process ensures the structural integrity of your roof is
+                            maintained.</p>
+                    </details>
+                    <!-- FAQ Item 4 -->
+                    <details class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                        <summary class="font-medium text-lg">Do I need to clean my Solar plant?</summary>
+                        <p class="mt-4 text-gray-600">Regular cleaning of solar panels is recommended to maintain
+                            optimal efficiency. Dust, dirt, and debris can reduce power generation.</p>
+                    </details>
+                    <!-- FAQ Item 5 -->
+                    <details class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                        <summary class="font-medium text-lg">My roof is not made of concrete; can I still install a
+                            Solar Project?</summary>
+                        <p class="mt-4 text-gray-600">Yes, solar panels can be installed on various types of rooftops,
+                            including metal and tiled roofs. Our engineers will assess your specific roof type and
+                            provide a suitable solution.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-12 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">PPD Solar</h3>
+                <p class="text-gray-300 mb-4">Rooftop solar made simple. We don't just sell solar - we give you peace of
+                    mind.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Solutions -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Our Solutions</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:underline">Homes</a></li>
+                    <li><a href="#" class="hover:underline">Commercial</a></li>
+                    <li><a href="#" class="hover:underline">Housing Society</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">SolarPro Partner</a></li>
+                    <li><a href="#" class="hover:underline">Sitemap</a></li>
+                    <li><a href="#" class="hover:underline">Careers</a></li>
+                    <li><a href="#" class="hover:underline">On-Grid Solar</a></li>
+                    <li><a href="#" class="hover:underline">Off-Grid Solar</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact</h3>
+                <p class="text-gray-300">welisten@ppdsolar.in</p>
+                <p class="text-gray-300">Address: Demo Location, Mumbai, India</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-sm mt-8">
+            <p>Proudly made in India</p>
+            <p class="mt-2">
+                <a href="#" class="hover:underline">Whistleblower Policy</a> /
+                <a href="#" class="hover:underline">Privacy Policy</a> /
+                <a href="#" class="hover:underline">Terms of Service</a> /
+                <a href="#" class="hover:underline">TnC GoodZero</a> /
+                <span>Copyright © 2025</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to show the contact modal
+        function showContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('hidden');
+        }
+
+        // Function to hide the contact modal
+        function hideContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.add('hidden');
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</body>
+
+</html>
